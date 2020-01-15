@@ -1,0 +1,95 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Addtyping	acmebufs/winslice.go	/^func (ws *Winslice) Addtyping(ty []byte, p int) {$/;"	f
+Afterslice	acmebufs/winslice.go	/^func (ws *Winslice) Afterslice(q0, n int) bool {$/;"	f
+Beforeslice	acmebufs/winslice.go	/^func (ws *Winslice) Beforeslice(q0 int) bool {$/;"	f
+Cancel	ttypair/decho.go	/^func (e *Echo) Cancel(p []byte) []byte {$/;"	f
+Delete	acmebufs/winslice.go	/^func (ws *Winslice) Delete(q0, q1 int) int {$/;"	f
+Dropcrnl	filter/dropcrnl.go	/^func Dropcrnl(r []byte) []byte {$/;"	f
+Echo	ttypair/decho.go	/^type Echo struct {$/;"	t
+Extent	acmebufs/winslice.go	/^func (ws *Winslice) Extent() (int, int) {$/;"	f
+Inslice	acmebufs/winslice.go	/^func (ws *Winslice) Inslice(q0 int) bool {$/;"	f
+Israw	ttypair/pair.go	/^func (t *Tty) Israw() bool {$/;"	f
+Labelcommand	filter/labelcommand.go	/^func Labelcommand(b []byte) ([]byte, []byte) {$/;"	f
+Makecho	ttypair/decho.go	/^func Makecho() *Echo {$/;"	f
+Move	acmebufs/winslice.go	/^func (ws *Winslice) Move(p int) {$/;"	f
+New	acmebufs/winslice.go	/^func New() *Winslice {$/;"	f
+New	ttypair/pair.go	/^func New(fd io.Writer, e *Echo) *Tty {$/;"	f
+Ntyper	acmebufs/winslice.go	/^func (ws *Winslice) Ntyper() int {$/;"	f
+Q	winmux.go	/^type Q struct {$/;"	t
+Reset	acmebufs/winslice.go	/^func (ws *Winslice) Reset() {$/;"	f
+Runemodulus	filter/partialrune.go	/^func Runemodulus(buf []byte) (valid []byte, rem []byte) {$/;"	f
+Sendbs	ttypair/pair.go	/^func (t *Tty) Sendbs(n int) {$/;"	f
+Sendtype	ttypair/pair.go	/^func (t *Tty) Sendtype() {$/;"	f
+Setcook	ttypair/pair.go	/^func (t *Tty) Setcook(b bool) {$/;"	f
+Squashnul	filter/squash.go	/^func Squashnul(r []byte) []byte {$/;"	f
+String	acmebufs/winslice.go	/^func (ws *Winslice) String() string {$/;"	f
+Test_Addtyping	acmebufs/winslice_test.go	/^func Test_Addtyping(t *testing.T) {$/;"	f
+Test_Addtyping_AfterPanic	acmebufs/winslice_test.go	/^func Test_Addtyping_AfterPanic(t *testing.T) {$/;"	f
+Test_Addtyping_BeforePanic	acmebufs/winslice_test.go	/^func Test_Addtyping_BeforePanic(t *testing.T) {$/;"	f
+Test_Cancel_Backspace	ttypair/decho_test.go	/^func Test_Cancel_Backspace(t *testing.T) {$/;"	f
+Test_Cancel_CharacterChange	ttypair/decho_test.go	/^func Test_Cancel_CharacterChange(t *testing.T) {$/;"	f
+Test_Cancel_Subword	ttypair/decho_test.go	/^func Test_Cancel_Subword(t *testing.T) {$/;"	f
+Test_Cancel_Terminating_NL_Not_Cancelled	ttypair/decho_test.go	/^func Test_Cancel_Terminating_NL_Not_Cancelled(t *testing.T) {$/;"	f
+Test_Cancel_Wholeword	ttypair/decho_test.go	/^func Test_Cancel_Wholeword(t *testing.T) {$/;"	f
+Test_Delete_before_offset	acmebufs/winslice_test.go	/^func Test_Delete_before_offset(t *testing.T) {$/;"	f
+Test_Delete_in_middle	acmebufs/winslice_test.go	/^func Test_Delete_in_middle(t *testing.T) {$/;"	f
+Test_Delete_multi	acmebufs/winslice_test.go	/^func Test_Delete_multi(t *testing.T) {$/;"	f
+Test_Delete_panic	acmebufs/winslice_test.go	/^func Test_Delete_panic(t *testing.T) {$/;"	f
+Test_Delete_spanning_offset	acmebufs/winslice_test.go	/^func Test_Delete_spanning_offset(t *testing.T) {$/;"	f
+Test_Delete_to_empty	acmebufs/winslice_test.go	/^func Test_Delete_to_empty(t *testing.T) {$/;"	f
+Test_Dropcrnl	filter/dropcrnl_test.go	/^func Test_Dropcrnl(t *testing.T) {$/;"	f
+Test_EchoedType	ttypair/decho_test.go	/^func Test_EchoedType(t *testing.T) {$/;"	f
+Test_Israw	ttypair/pair_test.go	/^func Test_Israw(t *testing.T) {$/;"	f
+Test_Labelcommand_basic	filter/labelcommand_test.go	/^func Test_Labelcommand_basic(t *testing.T) {$/;"	f
+Test_Labelcommand_has_empty	filter/labelcommand_test.go	/^func Test_Labelcommand_has_empty(t *testing.T) {$/;"	f
+Test_Labelcommand_hascmd	filter/labelcommand_test.go	/^func Test_Labelcommand_hascmd(t *testing.T) {$/;"	f
+Test_Labelcommand_hascmd_end	filter/labelcommand_test.go	/^func Test_Labelcommand_hascmd_end(t *testing.T) {$/;"	f
+Test_Labelcommand_hascmd_start	filter/labelcommand_test.go	/^func Test_Labelcommand_hascmd_start(t *testing.T) {$/;"	f
+Test_Labelcommand_hasend	filter/labelcommand_test.go	/^func Test_Labelcommand_hasend(t *testing.T) {$/;"	f
+Test_Labelcommand_hasend_with_space	filter/labelcommand_test.go	/^func Test_Labelcommand_hasend_with_space(t *testing.T) {$/;"	f
+Test_Move	acmebufs/winslice_test.go	/^func Test_Move(t *testing.T) {$/;"	f
+Test_Reset	acmebufs/winslice_test.go	/^func Test_Reset(t *testing.T) {$/;"	f
+Test_Runemodulus	filter/partialrune_test.go	/^func Test_Runemodulus(t *testing.T) {$/;"	f
+Test_Sendtype	ttypair/pair_test.go	/^func Test_Sendtype(t *testing.T) {$/;"	f
+Test_SendtypeMultiblock	ttypair/pair_test.go	/^func Test_SendtypeMultiblock(t *testing.T) {$/;"	f
+Test_SendtypeOnechar	ttypair/pair_test.go	/^func Test_SendtypeOnechar(t *testing.T) {$/;"	f
+Test_Squashnul	filter/squash_test.go	/^func Test_Squashnul(t *testing.T) {$/;"	f
+Test_Type	ttypair/pair_test.go	/^func Test_Type(t *testing.T) {$/;"	f
+Test_TypeCook	ttypair/pair_test.go	/^func Test_TypeCook(t *testing.T) {$/;"	f
+Test_addtype	ttypair/pair_test.go	/^func Test_addtype(t *testing.T) {$/;"	f
+Tty	ttypair/pair.go	/^type Tty struct {$/;"	t
+Type	ttypair/pair.go	/^func (t *Tty) Type(e *acme.Event) {$/;"	f
+Winslice	acmebufs/winslice.go	/^type Winslice struct {$/;"	t
+Write	ttypair/pair_test.go	/^func (mt *mockttyfd) Write(b []byte) (int, error) {$/;"	f
+acmebufs	acmebufs/winslice.go	/^package acmebufs$/;"	p
+acmebufs	acmebufs/winslice_test.go	/^package acmebufs$/;"	p
+acmetowin	winmux.go	/^func acmetowin(q *Q, f io.Writer, e *ttypair.Echo) {$/;"	f
+addtype	ttypair/pair.go	/^func (t *Tty) addtype(typing []byte, p0 int, fromkeyboard bool) {$/;"	f
+childtoacme	childtoacme.go	/^func childtoacme(q *Q, fd io.Reader, echo *ttypair.Echo) {$/;"	f
+echoed	ttypair/decho.go	/^func (echos *Echo) echoed(s []byte) {$/;"	f
+enhancedlog	childtoacme.go	/^func enhancedlog(b []byte) {$/;"	f
+filter	filter/dropcrnl.go	/^package filter$/;"	p
+filter	filter/dropcrnl_test.go	/^package filter$/;"	p
+filter	filter/labelcommand.go	/^package filter$/;"	p
+filter	filter/labelcommand_test.go	/^package filter$/;"	p
+filter	filter/partialrune.go	/^package filter$/;"	p
+filter	filter/partialrune_test.go	/^package filter$/;"	p
+filter	filter/squash.go	/^package filter$/;"	p
+filter	filter/squash_test.go	/^package filter$/;"	p
+main	childtoacme.go	/^package main$/;"	p
+main	usage.go	/^package main$/;"	p
+main	winmux.go	/^func main() {$/;"	f
+main	winmux.go	/^package main$/;"	p
+mockttyfd	ttypair/pair_test.go	/^type mockttyfd struct {$/;"	t
+sende	winmux.go	/^func sende(q *Q, t *ttypair.Tty, e *acme.Event, donl bool) {$/;"	f
+ttypair	ttypair/decho.go	/^package ttypair$/;"	p
+ttypair	ttypair/decho_test.go	/^package ttypair$/;"	p
+ttypair	ttypair/pair.go	/^package ttypair$/;"	p
+ttypair	ttypair/pair_test.go	/^package ttypair$/;"	p
+unknown	winmux.go	/^func unknown(e *acme.Event) {$/;"	f
+usage	usage.go	/^const usage =$/;"	c

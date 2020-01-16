@@ -165,6 +165,7 @@ func acmetowin(q *Q, f io.Writer, e *ttypair.Echo) {
 	// TODO(rjkroege): verify the correctness of this position.
 	t.Move(len("\n"))
 
+	// labeling infinite loop to break on exit
 L:
 	for {
 		if debug {

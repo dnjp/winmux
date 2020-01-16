@@ -1,3 +1,5 @@
-This is a [Go language](http://golang.org) replica of the Plan9 `win` command with the addition of persistent terminal multiplexing.
+# Winmux
+Winmux is a [Go](http://golang.org) port of the Plan9 `win` command originally started by [rjkroege](https://github.com/rjkroege/winmux). 
 
-Status: work in progress and not being actively advanced at this time.
+# Install
+`go get git.sr.ht/~danieljamespost/winmux'

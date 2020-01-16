@@ -4,3 +4,5 @@ github.com/kr/pty v1.1.5 h1:hyz3dwM5QLc1Rfoz4FuWJQG5BN7tc6K1MndAUnGpQr4=
 github.com/kr/pty v1.1.5/go.mod h1:9r2w37qlBe7rQ6e1fg1S/9xpWHSnaqNdHD3WcMdbPDA=
 github.com/rjkroege/wikitools v0.0.0-20191228185909-48516181b2f4 h1:feD+msdzKEsyOHyRBX+CaC8kOZq6coYWBDL545f9zOw=
 github.com/rjkroege/wikitools v0.0.0-20191228185909-48516181b2f4/go.mod h1:LTg9o09Jg7hXEM8GNd2csanA80efjgkmtwUSSnZwO5Q=
+github.com/rjkroege/winmux v0.0.0-20190612111441-474bbf33669f h1:XCq9pw5RuLFGJmNr0cs2GOrZhlEWO78EfB6fhffFL/w=
+github.com/rjkroege/winmux v0.0.0-20190612111441-474bbf33669f/go.mod h1:AMD7FwlOYBCs7PBnlIcmvvpUcYK8ZiHyfSKugX/uTww=

@@ -9,19 +9,15 @@ package main
 import (
 	"9fans.net/go/acme"
 	"bytes"
-	"fmt"
-	"github.com/rjkroege/winmux/ttypair"
+	"flag"
+	"git.sr.ht/~danieljamespost/winmux/ttypair"
+	"github.com/kr/pty"
+	"io"
 	"log"
-	//	"os"
+	"os"
+	"os/exec"
 	"sync"
 	"unicode/utf8"
-	//	"code.google.com/p/goplan9/draw"
-	//	"image"
-	"flag"
-	"github.com/kr/pty"
-	"os/exec"
-	//	"os"
-	"io"
 )
 
 type Q struct {
@@ -44,8 +40,12 @@ func main() {
 	//var window_name = flag.String("name", "", "Acme window name")
 	flag.Parse()
 
-	cmd := "/usr/local/bin/rc"
 	// cmd := "/usr/local/plan9/bin/cat"	// Safer for now.
+	cmd := os.Getenv("acmeshell")
+	arg := "-l"
+	if cmd == "" {
+		cmd = "/usr/local/bin/rc"
+	}
 	if args := flag.Args(); len(args) == 1 {
 		cmd = args[0]
 	} else if len(args) > 1 {
@@ -63,10 +63,10 @@ func main() {
 	}
 
 	q.Win.Name("winmux-%s", cmd)
-	q.Win.Fprintf("body", "hi rob\n")
+	q.Win.Fprintf("body", "\n")
 
 	// TODO(rjkroege): start the function that receives from the pty and inserts into acme
-	c := exec.Command(cmd)
+	c := exec.Command(cmd, arg)
 	f, err := pty.Start(c)
 	if err != nil {
 		log.Fatalf("failed to start pty up: %s", err.Error())
@@ -82,7 +82,6 @@ func main() {
 	acmetowin(&q, f, echo)
 
 	q.Win.CloseFiles()
-	fmt.Print("bye\n")
 }
 
 // Equivalent to the original implementation's sende function.
@@ -165,7 +164,7 @@ func acmetowin(q *Q, f io.Writer, e *ttypair.Echo) {
 
 	// TODO(rjkroege): extract the initial value of Offset from the Acme buffer.
 	// TODO(rjkroege): verify the correctness of this position.
-	t.Move(len("hi rob\n"))
+	t.Move(len("\n"))
 
 	for {
 		if debug {

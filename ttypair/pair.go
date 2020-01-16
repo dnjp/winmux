@@ -7,8 +7,9 @@ package ttypair
 import (
 	"9fans.net/go/acme"
 	"bytes"
-	"github.com/rjkroege/winmux/acmebufs"
+	"git.sr.ht/~danieljamespost/winmux/acmebufs"
 	"io"
+	"log"
 )
 
 //type Ttyfd interface {
@@ -41,12 +42,12 @@ func (t *Tty) Israw() bool {
 
 // Ships n backspaces to the child.
 func (t *Tty) Sendbs(n int) {
-	//log.Printf("Sendbs %d\n", n)
+	log.Printf("Sendbs %d\n", n)
 }
 
 func (t *Tty) Setcook(b bool) {
 	t.cook = b
-	//log.Printf("Setcook to %b\n", b)
+	log.Printf("Setcook to %t\n", b)
 }
 
 // Writes the provided buffer to the associated file descriptor.
@@ -62,7 +63,7 @@ func (t *Tty) Setcook(b bool) {
 func (t *Tty) addtype(typing []byte, p0 int, fromkeyboard bool) {
 	// log.Println("Tty.addtype")
 	if fromkeyboard && bytes.IndexAny(typing, "\003\007") != -1 {
-		//log.Println("Tty.addtype: resetting")
+		log.Println("Tty.addtype: resetting")
 		t.Reset()
 		return
 	}
@@ -76,14 +77,14 @@ func (t *Tty) Type(e *acme.Event) {
 		// TODO(rjkroege): Conceivably, I am not shifting the offset enough.
 		t.addtype(e.Text, e.Q0, e.C1 == 'K' /* Verify this test. */)
 	} else {
-		//log.Fatal("you've not handled the case where you need to read from acme\n")
+		log.Fatal("you've not handled the case where you need to read from acme\n")
 		// TODO(rjkroege): Write the acme fetcher...
 	}
 
 	if t.Israw() {
 		// This deletes the character typed if we have set israw so that
 		// raw mode works properly.
-		//log.Fatal("unsupported raw mode\n")
+		log.Fatal("unsupported raw mode\n")
 		//		n = sprint(buf, "#%d,#%d", e->q0, e->q1);
 		//		fswrite(afd, buf, n);
 		//		fswrite(dfd, "", 0);

@@ -2,8 +2,6 @@
 // Oh well.
 package ttypair
 
-import ()
-
 type Echo struct {
 	childbound chan []byte
 	oldest     []byte

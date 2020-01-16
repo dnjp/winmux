@@ -4,21 +4,11 @@ package main
 // TODO(rjk): Move this to its own package.
 
 import (
-	//	"bytes"
-	//	"9fans.net/go/acme"
-	//	"fmt"
-	"github.com/rjkroege/winmux/filter"
-	"github.com/rjkroege/winmux/ttypair"
-	"log"
-	//	"os"
-	//	"sync"
-	"unicode/utf8"
-	//	"code.google.com/p/goplan9/draw"
-	//	"image"
-	//	"flag"
-	//	"github.com/kr/pty"
-	//	"os/exec"
+	"git.sr.ht/~danieljamespost/winmux/filter"
+	"git.sr.ht/~danieljamespost/winmux/ttypair"
 	"io"
+	"log"
+	"unicode/utf8"
 )
 
 // Must not modify buffer b.

@@ -10,8 +10,9 @@ import (
 	"9fans.net/go/acme"
 	"bytes"
 	"flag"
+	//"fmt"
 	"git.sr.ht/~danieljamespost/winmux/ttypair"
-	"github.com/kr/pty"
+	"github.com/creack/pty"
 	"io"
 	"log"
 	"os"
@@ -37,10 +38,8 @@ func main() {
 
 	// Actually make this correspond to the real syntax.
 	var window_id = flag.Int("id", -1, "Acme window id")
-	//var window_name = flag.String("name", "", "Acme window name")
 	flag.Parse()
 
-	// cmd := "/usr/local/plan9/bin/cat"	// Safer for now.
 	cmd := os.Getenv("acmeshell")
 	arg := "-l"
 	if cmd == "" {
@@ -166,6 +165,7 @@ func acmetowin(q *Q, f io.Writer, e *ttypair.Echo) {
 	// TODO(rjkroege): verify the correctness of this position.
 	t.Move(len("\n"))
 
+L:
 	for {
 		if debug {
 			a, b := t.Extent()
@@ -192,6 +192,15 @@ func acmetowin(q *Q, f io.Writer, e *ttypair.Echo) {
 					log.Printf("shift typing %d... ", e.Q1-e.Q0)
 				}
 				t.Move(e.Q1 - e.Q0)
+			case 'x': // execute in tag
+				switch string(e.Text) {
+				case "Del":
+					//q.Win.Ctl("delete")
+					q.Win.Del(true)
+					break L
+				default:
+					q.Win.WriteEvent(e)
+				}
 			case 'i', 'd': /* tag */
 			default:
 				unknown(e)
@@ -235,6 +244,13 @@ func acmetowin(q *Q, f io.Writer, e *ttypair.Echo) {
 				}
 				break
 			case 'x', 'X': // button 2 in the tag or body
+
+				if string(e.Text) == "Del" {
+					//q.Win.Ctl("delete")
+					q.Win.Del(true)
+					break L
+				}
+
 				// TODO(rjkroege): Copy the text to the bottom.
 				if e.Flag&1 != 0 || (e.C2 == 'x' && e.Nr == 0) {
 					/* send it straight back */
